@@ -6,7 +6,6 @@ const TabButton = ({
 
     const buttonClasses = active ? 'text-white border-b border-red-500' : 'text-[#ADB7BE]'
 
-
     return (
         <button onClick={selectTab}>
             <p className={`mr-3 font-semibold hover:test-white ${buttonClasses}`}>
