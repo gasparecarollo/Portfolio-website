@@ -1,4 +1,8 @@
-import React from 'react'
+import React from 'react';
+import GithubIcon from '../../../public/GitHub-logo.png';
+import LinkedInIcon from '../../../public/LinkedIn-logo.png';
+import Link from 'next/link';
+
 
 const EmailSection = () => {
     return (
@@ -10,6 +14,7 @@ const EmailSection = () => {
                 <p className="text-[#ADB7BE] mb-4 max-w-md">
                     I'm currently looking for new opportunities, my inbox is always open for collaborations. Whether you have a question, or just want to stop by and say hi, I'll try my best to get back to you!
                 </p>
+                <div className="socials flex flex-row gap-2"></div>
             </div>
         </section>
     )
