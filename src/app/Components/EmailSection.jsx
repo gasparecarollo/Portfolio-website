@@ -6,7 +6,9 @@ import Image from 'next/image';
 
 const EmailSection = () => {
     return (
-        <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4'>
+        <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative'>
+            <div className='bg-[radial-gradient(ellipse_at_center, _var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2'></div>
+            <div className='z-5'></div>
             <div>
                 <h5 className="text-xl font-bold text-white my-2">
                     Let's Connect
@@ -14,12 +16,14 @@ const EmailSection = () => {
                 <p className="text-[#ADB7BE] mb-4 max-w-md">
                     I'm currently looking for new opportunities, my inbox is always open for collaborations. Whether you have a question, or just want to stop by and say hi, I'll try my best to get back to you!
                 </p>
-                <div className="socials flex flex-row gap-2">
+                <div className="socials flex flex-row gap-2 mb-4">
                     <Link href="https://github.com/gasparecarollo">
-                        <Image src={GithubIcon} alt="Github Icon" />
+                        <Image src={GithubIcon} alt="Github Icon"
+                            weight={50} height={50}
+                        />
                     </Link>
                     <Link href="https://www.linkedin.com/in/gcarollo85/">
-                        <Image src={LinkedInIcon} alt="LinkedIn Icon" />
+                        <Image src={LinkedInIcon} alt="LinkedIn Icon" width={50} height={50} />
                     </Link>
                 </div>
                 <div>
@@ -41,10 +45,29 @@ const EmailSection = () => {
                             <input
                                 type="text"
                                 id="subject"
-                                placeholder="Your message here..."
+                                placeholder="What topic would you like to discuss?"
                                 required
                                 className="bg-[#18191E] border border-[#33353F] placeholder-[#8CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                             />
+                        </div>
+                        <div className="mb-6">
+                            <label
+                                htmlFor='message'
+                                className="text-white block text-sm mb-2 font-medium"
+                            >
+                                Message
+                            </label>
+                            <textarea
+                                name="message"
+                                id="message"
+                                className='bg-[#18191E] border border-[#33353F] placeholder-[#8CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5'
+                                placeholder='Your message goes here...'
+                            />
+                            <button
+                                type='submit'
+                                className="bg-red-600
+                                hover:bg-red-800 text-white font medium py-2.5 px-5 rounded-lg w-full my-3"> Send Message</button>
+
                         </div>
                     </form>
                 </div>
