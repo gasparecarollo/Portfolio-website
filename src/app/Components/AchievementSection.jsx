@@ -1,12 +1,12 @@
 "use cliient";
 import React from 'react'
-import Dynamic from "next/dynamic";
+import dynamic from "next/dynamic";
 
 const AchievementSection = dynamic(
     () => {
         return import("react-animated-numbers");
     },
-    { ser: false }
+    { ssr: false }
 );
 
 const achievementsList = [
@@ -46,14 +46,14 @@ const AchievementsSection = () => {
                                     animateToNumber={parseInt(achievement.value)}
                                     locale="en-US"
                                     className="text-white
-                    text-4xl font-bold"       configs={(, index) => {
-                        return )
-                                mass:1,
-                                friction: 100,
-                                tensions: 140 * (index + 1),
-                    }
-                }}          
-                 />
+                    text-4xl font-bold"       configs={(_, index) => {
+                                        return {
+                                            mass: 1,
+                                            friction: 100,
+                                            tensions: 140 * (index + 1),
+                                        };
+                                    }}
+                                />
                                 {achievement.postfix}
                             </h2>
                             <p className="text-[#ADB7BE] text-base">
@@ -61,11 +61,11 @@ const AchievementsSection = () => {
                             </p>
                         </div>
                     );
-                })};
+                })}
             </div>
         </div>
-    )
-}
+    );
+};
 
 
 export default AchievementSection
