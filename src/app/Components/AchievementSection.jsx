@@ -1,11 +1,11 @@
-"use cliient";
+"use client";
 import React from 'react'
 import dynamic from "next/dynamic";
 
-const AchievementSection = dynamic(
-    () => {
-        return import("react-animated-numbers");
-    },
+const AnimatedNumbers = dynamic(() => {
+    return import("react-animated-numbers");
+
+},
     { ssr: false }
 );
 
@@ -50,7 +50,7 @@ const AchievementsSection = () => {
                                         return {
                                             mass: 1,
                                             friction: 100,
-                                            tensions: 140 * (index + 1),
+                                            tensions: 140 * (inde + 1),
                                         };
                                     }}
                                 />
@@ -68,4 +68,4 @@ const AchievementsSection = () => {
 };
 
 
-export default AchievementSection
+export default AchievementsSection;

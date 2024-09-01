@@ -102,11 +102,11 @@ const EmailSection = () => {
                             />
                             <button
                                 type='submit'
-                                className="bg-red-600
-                                hover:bg-red-800 text-white font medium py-2.5 px-5 rounded-lg w-full my-3"> Send Message</button>
+                                className="bg-secondary-600
+                                hover:bg-secondary-800 text-white font medium py-2.5 px-5 rounded-lg w-full my-3"> Send Message</button>
                             {
                                 emailSent && (
-                                    <p className="text-green-500 text-sm mt-2">Email sent successfully!</p>
+                                    <p className="text-primary-500 text-sm mt-2">Email sent successfully!</p>
                                 )
                             }
                         </div>
